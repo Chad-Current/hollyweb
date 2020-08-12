@@ -1,0 +1,277 @@
+/* color scheme
+#FBE8A6; yellow
+#F4976C; orange
+#303C6C; blue/purple
+#B4DFE5; blue/light
+#D2FDFF; blue/teal
+*/
+
+$primary-fontsize: 4em;
+$secondary-fontsize: 3rem;
+$primary-fontfamily: 'Quicksand';
+$secondary-fontfamily: 'Merriweather';
+$third-fontsize: 2rem;
+$third-fontfamily: 'Oxygen';
+$main-background: #FBE8A6;
+// *{border: dotted 2px red;}
+
+
+body {
+  margin: auto 0;
+  padding: 0;
+  background: #303C6C;
+  // background-image: linear-gradient(#FBE8A6, #303C6C, #B4DFE5);
+}
+h1{
+  font-size: $secondary-fontsize;
+  color: #303C6C;
+}
+h2{
+  font-size: $secondary-fontsize;
+  font-family: $secondary-fontfamily;
+  font-weight: 600;
+  color: #303C6C;
+}
+ul{
+  list-style: none;
+  font-size: $third-fontsize;
+  font-family: $third-fontfamily;
+  line-height: 5rem;
+  padding: 0em 0em;
+}
+p{
+  font-size: $third-fontsize;
+  font-family: $third-fontfamily;
+  font-weight: 500;
+  line-height: 5rem;
+  padding: 0em 5em;
+  // text-indent: 2em;
+}
+strong{
+  color: #303C6C;
+  font-size: 2.5rem;
+}
+iframe {
+}
+
+header{
+  display: flex;
+  justify-content: center;
+}
+#navigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  background: orange;
+  margin-top: 10em;
+}
+
+.container-nav{
+  ul{
+    display: flex;
+    justify-content: space-around;
+    // line-height: 3em; /* adjust for fixed navigation bar? */
+    // background: #D2FDFF;
+    // border: 1px solid magenta;
+  }
+  li{
+    // border: 2px dotted orange;
+  }
+  a{
+    text-decoration: none;
+    font-size: $third-fontsize;
+    font-family: $third-fontfamily;
+    font-weight: 700;
+    color: #000;
+    // border: 3px solid green;
+  }
+  a:hover, a:focus  {
+    color: #FFF;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1080px;
+}
+.container-centered{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1080px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15em;
+  padding-bottom: 15em;
+}
+
+.container-sidebyside{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2em;
+}
+.logo{
+  position: absolute;
+  padding-top: 5em;
+  width:35em;
+  z-index:0;
+}
+.btn{
+  position: absolute;
+  width:15em;
+  z-index:0;
+  align-self: flex-end;
+  bottom: 10px;
+}
+.btn-blue{
+  background: #303C6C;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 15px;
+  a:hover{
+    background: black;
+  }
+}
+
+#video_box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-head{
+  font-size: $primary-fontsize;
+  font-family: $primary-fontfamily;
+  font-weight: 700;
+  padding: .75em 0em 0em 0em;
+  color: #FFF;
+}
+.section-one {
+}
+.splash{
+  color: #FFF;
+  padding: 22.5em 0em;
+  h2{
+    font-size: $primary-fontsize;
+    color:inherit;
+  }
+  p{
+    text-indent: 1em;
+  }
+}
+.section-two{
+  background: $main-background;
+}
+.main-target{
+  padding: 6em 0em;
+}
+.section-three{
+  display: flex;
+  justify-content: space-between;
+}
+
+.show{
+  width: 45%;
+  color: #FFF;
+  h2{
+    color: inherit;
+    padding-bottom: .5em;
+  }
+}
+.blog {
+  padding: 2em 0em;
+  color: #FFF;
+  width: 45%;
+  h2{
+  display: flex;
+  justify-content: center;
+  color: inherit;
+  }
+  p{
+    font-size: 1.75rem;
+    padding: 2em 0em;
+  }
+}
+.section-four{
+  background: $main-background;
+}
+.img-box{
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  padding: 5em;
+}
+.img-sm-container{
+  min-width: 1em;
+  max-width: 20em;
+}
+.boxed{
+  width:100%;
+}
+
+.small{
+  font-size: 1.125rem;
+}
+
+
+
+.sticky {
+  position: fixed;
+  top: 0em;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px){
+  body{
+    background: red;
+  }
+  #video_box{
+    display: none;
+    visibility: hidden;
+  }
+  #navigation{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .container-nav{
+    padding: .25em 0em;
+    h1{
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #F4976C;
+    }
+    li{
+      align-items: center;
+    }
+    a{
+      text-decoration: none;
+      font-size: $third-fontsize;
+      font-family: $secondary-fontfamily;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+  .main-head{
+    font-size: $secondary-fontsize;
+    font-family: $primary-fontfamily;
+    font-weight: 500;
+    color: #303C6C;
+  }
+}
